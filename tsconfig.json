@@ -1,0 +1,11 @@
+{
+    "include": [
+        "src/*"
+, "src/index/index.tsts/constants/index.ts"    ],
+    "compilerOptions": {
+        "target": "es6",
+        "jsx": "react",
+        "allowSyntheticDefaultImports": true,
+        "baseUrl": "."
+    }
+}

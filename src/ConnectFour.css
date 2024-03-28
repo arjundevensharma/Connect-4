@@ -1,0 +1,163 @@
+/* Base settings for typography and layout */
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+  --blue: #1e90ff;
+  --red: #ff4136;
+  --yellow: #ffd700;
+  --dark-blue: #27496d;
+  --light-grey: #f7f7f7;
+  --transition-speed: 0.3s;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: var(--light-grey);
+  color: var(--dark-blue);
+}
+
+/* Styling for headers */
+h1 {
+  text-align: center;
+  color: var(--blue);
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Enhanced table styling */
+table {
+  margin: 2rem auto;
+  background: linear-gradient(145deg, var(--blue), var(--dark-blue));
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-collapse: collapse;
+  overflow: hidden;
+  border-radius: 0.5rem;
+}
+
+/* Refined button styling */
+.button {
+  padding: 0.5rem 1rem;
+  border: none;
+  background-image: linear-gradient(45deg, var(--blue) 0%, var(--dark-blue) 100%);
+  color: white;
+  font-weight: 600;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  border-radius: 2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: all var(--transition-speed) ease;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.button::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(45deg, #ffffff66 0%, #00000066 100%);
+  opacity: 0;
+  border-radius: 2rem;
+  transition: opacity var(--transition-speed) ease;
+  z-index: -1;
+}
+
+.button:hover, .button:focus {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  color: var(--light-grey);
+}
+
+.button:hover::after, .button:focus::after {
+  opacity: 1;
+}
+
+/* Tile styling with pseudo-elements for extra flair */
+.tile {
+  position: relative;
+  height: 80px;
+  width: 80px;
+  background-color: var(--blue);
+  transition: transform var(--transition-speed) ease;
+}
+
+.tile:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+.open {
+  background-color: var(--light-grey);
+}
+
+.circle {
+  border-radius: 50%;
+  height: 65px;
+  width: 65px;
+  transition: background-color var(--transition-speed);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+  transform: translate(6px, 6px);
+}
+
+.player1, .player2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.player1 {
+  background-color: var(--red);
+}
+
+.player2 {
+  background-color: var(--yellow);
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  .tile {
+    height: 60px;
+    width: 60px;
+  }
+
+  .circle {
+    height: 45px;
+    width: 45px;
+  }
+
+  .button {
+    padding: 0.3rem 0.8rem;
+    font-size: 0.9rem;
+  }
+}
+
+.cell-animation {
+  transition: transform 0.5s ease-in;
+}
+
+.falling {
+  transform: translateY(-100vh);
+}
+
+.circle {
+  transition: transform 0.5s ease-in-out;
+}
+
+.falling {
+  transform: translateY(0);
+}
