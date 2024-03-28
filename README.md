@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# Connect 4
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Online local two-player Connect 4 platform built with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
