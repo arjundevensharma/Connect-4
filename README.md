@@ -1,7 +1,5 @@
 # Connect 4
 
-Play [here](https://arjundevensharma.github.io/Connect-4/)!
-
 <img width="1433" alt="Screenshot 2024-03-28 at 11 32 58 AM" src="https://github.com/arjundevensharma/Connect-4/assets/129678257/f9abf9d2-a9e0-4b7d-8377-92e1c105042f">
 
 Online local two-player Connect 4 platform built with [Create React App](https://github.com/facebook/create-react-app).
